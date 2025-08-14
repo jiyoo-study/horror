@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body, html, #root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #191919;
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+}
+
+.app-header {
+  color: crimson;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* 공통 설명 텍스트 */
+.app-desc {
+  color: #e1e1e1;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 찜 목록 영역 */
+.wishlist-section {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #222; /* 배경 톤을 본문보다 살짝 밝게 */
+  box-sizing: border-box;
+}
+
+.wishlist-section h3 {
+  color: crimson;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.wishlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wishlist-item {
+  justify-items: center;
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid #333;
+  color: #eee;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.wishlist-item:last-child {
+  border-bottom: none;
 }
 
-.card {
-  padding: 2em;
+.wishlist-empty {
+  color: #7d7d7d;
+  padding-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+/* 삭제 버튼 */
+.remove-btn {
+  padding-left: 8px;
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+  color: crimson;
 }

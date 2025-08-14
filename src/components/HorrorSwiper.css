@@ -1,0 +1,79 @@
+.horror-swiper-wrap {
+  position: relative; /* 화살표 절대 위치 기준 */
+  width: 100%;
+}
+
+.horror-swiper-wrap .swiper {
+  overflow: hidden; /* 옆 카드 안 잘리게 유지 */
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.horror-card {
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.horror-card.placeholder {
+  background: transparent;
+  box-shadow: none;
+}
+
+.horror-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: crimson;
+}
+
+.horror-text {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+.horror-button {
+  background: crimson;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.horror-button:hover {
+  background: darkred;
+}
+
+/* 네비게이션 화살표 */
+.horror-swiper-wrap .swiper-button-prev,
+.horror-swiper-wrap .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+.horror-swiper-wrap .swiper-button-prev::after,
+.horror-swiper-wrap .swiper-button-next::after {
+  font-size: 28px !important;
+}
+
+.horror-swiper-wrap .swiper-button-prev { left: -40px; }
+.horror-swiper-wrap .swiper-button-next { right: -40px; }
+
+@media (max-width: 768px) {
+  .horror-swiper-wrap .swiper-button-prev { left: 0; }
+  .horror-swiper-wrap .swiper-button-next { right: 0; }
+}
